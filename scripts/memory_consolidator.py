@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Neural Memory Consolidator — Classify daily memories into neuron categories.
+Dimension Memory Consolidator — Classify daily memories into neuron categories.
 
 Brain analogy: Hippocampal replay during sleep → long-term memory formation.
 
@@ -18,7 +18,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 BRAIN_DIR = SCRIPT_DIR.parent
 WORKSPACE_DIR = BRAIN_DIR.parent
 MEMORY_DIR = WORKSPACE_DIR / "memory"
-NEURONS_DIR = WORKSPACE_DIR / "neurons"
+NEURONS_DIR = WORKSPACE_DIR / "dimensions"
 
 # Load categories from config
 CONFIG_FILE = BRAIN_DIR / "config" / "categories.json"
@@ -121,7 +121,7 @@ def consolidate(date_str: str):
 
 def main():
     target = sys.argv[1] if len(sys.argv) > 1 else (datetime.now(LOCAL_TZ) - timedelta(days=1)).strftime("%Y-%m-%d")
-    print(f"🧠 Neural Memory Consolidator — {datetime.now(LOCAL_TZ).strftime('%Y-%m-%d %H:%M')}")
+    print(f"🧠 Dimension Memory Consolidator — {datetime.now(LOCAL_TZ).strftime('%Y-%m-%d %H:%M')}")
     print("=" * 50)
     consolidate(target)
     print("=" * 50)

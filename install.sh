@@ -1,14 +1,14 @@
 #!/bin/bash
 set -e
 
-echo "🧠 OpenClaw Brain — Neural Memory System Installer"
+echo "🧠 OpenClaw Brain — Dimension Memory System Installer"
 echo "=================================================="
 echo ""
 
 # Resolve paths
 BRAIN_DIR="$(cd "$(dirname "$0")" && pwd)"
 WORKSPACE_DIR="$(dirname "$BRAIN_DIR")"
-NEURONS_DIR="$WORKSPACE_DIR/neurons"
+NEURONS_DIR="$WORKSPACE_DIR/dimensions"
 
 # Load config
 SCHEDULE_FILE="$BRAIN_DIR/config/schedule.json"
@@ -39,7 +39,7 @@ for v in cats.values():
 
 while IFS= read -r cat; do
     mkdir -p "$NEURONS_DIR/$cat"
-    echo "   ✅ neurons/$cat/"
+    echo "   ✅ dimensions/$cat/"
 done <<< "$CATEGORIES"
 
 # Step 2: Create memory subdirectories
@@ -63,12 +63,12 @@ echo ""
 if command -v qmd &> /dev/null; then
     echo "🔍 Setting up QMD collections..."
 
-    # Neurons collection
-    if ! qmd collection list 2>/dev/null | grep -q "neuron-memory"; then
-        qmd collection add "$NEURONS_DIR" --name neuron-memory --mask "**/*.md" 2>/dev/null || true
-        echo "   ✅ neuron-memory collection"
+    # Dimensions collection
+    if ! qmd collection list 2>/dev/null | grep -q "dimensions"; then
+        qmd collection add "$NEURONS_DIR" --name dimensions --mask "**/*.md" 2>/dev/null || true
+        echo "   ✅ dimensions collection"
     else
-        echo "   ⏭️  neuron-memory already exists"
+        echo "   ⏭️  dimensions already exists"
     fi
 
     # Sessions digest collection

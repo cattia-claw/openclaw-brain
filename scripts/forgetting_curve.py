@@ -20,7 +20,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 BRAIN_DIR = SCRIPT_DIR.parent
 WORKSPACE_DIR = BRAIN_DIR.parent
 MEMORY_DIR = WORKSPACE_DIR / "memory"
-NEURONS_DIR = WORKSPACE_DIR / "neurons"
+NEURONS_DIR = WORKSPACE_DIR / "dimensions"
 ARCHIVE_DIR = MEMORY_DIR / "archive"
 MONTHLY_DIR = MEMORY_DIR / "monthly-summary"
 DIGEST_DIR = MEMORY_DIR / "sessions-digest"
@@ -85,8 +85,8 @@ def generate_monthly_summary(year: int, month: int):
                 daily_count += 1
     lines.append(f"\n*{daily_count} days*")
 
-    # Neuron categories
-    lines.append("\n## 🧠 Neuron Summary")
+    # Dimension categories
+    lines.append("\n## 🧠 Dimension Summary")
     for cat_name in CATEGORY_NAMES:
         cat_dir = NEURONS_DIR / cat_name
         if not cat_dir.exists():

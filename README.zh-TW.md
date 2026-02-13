@@ -1,4 +1,4 @@
-# 🧠 OpenClaw Brain — 神經元記憶系統
+# 🧠 OpenClaw Brain — dimensions記憶系統
 
 為 [OpenClaw](https://github.com/openclaw/openclaw) AI Agent 打造的類人腦記憶架構。
 
@@ -40,7 +40,7 @@
 ║  🧬 記憶固化     memory_consolidator.py → 分類歸檔            ║
 ║         │                                                     ║
 ║         ├──► 📖 情節記憶    memory/YYYY-MM-DD.md              ║
-║         ├──► 🔬 語義記憶    neurons/{分類}/YYYY-MM-DD.md      ║
+║         ├──► 🔬 語義記憶    dimensions/{分類}/YYYY-MM-DD.md      ║
 ║         └──► 🔧 程序記憶    skills/ + TOOLS.md                ║
 ║                                                               ║
 ║  🔍 檢索系統     QMD 語義搜尋（本地向量）                     ║
@@ -55,7 +55,7 @@
 ## 功能特色
 
 - **對話摘要** — 自動將原始 Session JSONL 轉為可讀的 markdown 摘要（過濾心跳等雜訊）
-- **神經元彙整** — 將每日記憶分類到語義類別（可自訂）
+- **dimensions彙整** — 將每日記憶分類到語義類別（可自訂）
 - **QMD 整合** — 本地語義向量搜尋，橫跨所有記憶層
 - **遺忘曲線** — 月摘要、90 天自動封存、優雅的記憶衰減
 - **零外部依賴** — 純 Python，本地向量搜尋，不需要雲端服務
@@ -75,7 +75,7 @@ chmod +x install.sh
 ```
 
 安裝腳本會：
-1. 建立神經元目錄結構
+1. 建立dimensions目錄結構
 2. 設定 QMD 索引集合（如有安裝 QMD）
 3. 提示你請 Agent 註冊 cron jobs
 4. 執行一次測試彙整
@@ -96,7 +96,7 @@ chmod +x install.sh
 │   │   └── schedule.json           # 排程設定
 │   ├── install.sh
 │   └── uninstall.sh
-├── neurons/                  # 安裝腳本自動建立
+├── dimensions/                  # 安裝腳本自動建立
 │   ├── 情感/                 # 互動默契、偏好習慣
 │   ├── 重要的人/             # 關係網管理
 │   ├── 話題/                 # 興趣與長期討論
@@ -172,13 +172,13 @@ chmod +x install.sh
 凌晨 4:30：
 - 讀取昨日的每日記憶檔案
 - 透過關鍵字比對進行分類
-- 寫入對應的神經元類別資料夾
+- 寫入對應的dimensions類別資料夾
 
 ### 3. 語義搜尋（檢索系統）
 
 QMD 提供本地向量搜尋：
 ```bash
-qmd search neuron-memory "上週討論了什麼專案？"
+qmd search dimensions "上週討論了什麼專案？"
 ```
 
 ### 4. 每月遺忘
@@ -186,12 +186,12 @@ qmd search neuron-memory "上週討論了什麼專案？"
 每月 1 號：
 - 產生上月所有類別的摘要
 - 封存超過 90 天的每日檔案
-- 清理舊的神經元日報
+- 清理舊的dimensions日報
 
 ```
 即時 ───► 7天 ───► 30天 ───► 90天 ───► 1年+
 │         │        │         │         │
-完整對話   日誌     神經元     月摘要     封存精華
+完整對話   日誌     dimensions     月摘要     封存精華
 100%      80%      50%       20%        5%
 ```
 
@@ -205,7 +205,7 @@ qmd search neuron-memory "上週討論了什麼專案？"
 
 ### 新增分類
 
-在 `config/categories.json` 新增項目。分類會對應到 `neurons/` 下的資料夾。
+在 `config/categories.json` 新增項目。分類會對應到 `dimensions/` 下的資料夾。
 
 ### 修改封存門檻
 

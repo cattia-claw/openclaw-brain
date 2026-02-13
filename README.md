@@ -1,4 +1,4 @@
-# 🧠 OpenClaw Brain — Neural Memory System
+# 🧠 OpenClaw Brain — Dimension Memory System
 
 **🌐 Language: [English](README.md) | [繁體中文](README.zh-TW.md)**
 
@@ -22,7 +22,7 @@ Transform your agent from a goldfish (forgets everything each session) into a sy
 ║  🧬 Consolidation      memory_consolidator.py → categorized   ║
 ║         │                                                     ║
 ║         ├──► 📖 Episodic    memory/YYYY-MM-DD.md              ║
-║         ├──► 🔬 Semantic    neurons/{category}/YYYY-MM-DD.md  ║
+║         ├──► 🔬 Semantic    dimensions/{category}/YYYY-MM-DD.md  ║
 ║         └──► 🔧 Procedural  skills/ + TOOLS.md                ║
 ║                                                               ║
 ║  🔍 Retrieval           QMD semantic search (local vectors)   ║
@@ -77,7 +77,7 @@ After installation:
 │   │   └── categories.json   # Customizable category rules
 │   ├── install.sh
 │   └── uninstall.sh
-├── neurons/                  # Created by installer
+├── dimensions/                  # Created by installer
 │   ├── emotions/
 │   ├── people/
 │   ├── topics/
@@ -153,7 +153,7 @@ At 4:30 AM:
 
 QMD provides local vector search:
 ```bash
-qmd search neurons "what projects did we work on last week?"
+qmd search dimensions "what projects did we work on last week?"
 ```
 
 ### 4. Monthly Forgetting
@@ -173,7 +173,7 @@ On the 1st of each month:
 
 ### Adding Categories
 
-Add new entries to `config/categories.json`. Categories map to folders under `neurons/`.
+Add new entries to `config/categories.json`. Categories map to folders under `dimensions/`.
 
 ### Changing Archive Threshold
 
