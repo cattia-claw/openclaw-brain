@@ -1,5 +1,7 @@
 # 🧠 OpenClaw Brain — Neural Memory System
 
+**🌐 Language: [English](README.md) | [繁體中文](README.zh-TW.md)**
+
 A human-brain-inspired memory architecture for [OpenClaw](https://github.com/openclaw/openclaw) AI agents.
 
 Transform your agent from a goldfish (forgets everything each session) into a system with structured long-term memory, automatic consolidation, semantic search, and graceful forgetting.
