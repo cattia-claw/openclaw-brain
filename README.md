@@ -210,3 +210,10 @@ Inspired by human memory architecture:
 - **Hippocampal consolidation** during sleep
 
 Built for the [OpenClaw](https://github.com/openclaw/openclaw) ecosystem.
+
+## Contributors
+
+| | Name | Role |
+|---|---|---|
+| <a href="https://github.com/liyoungc"><img src="https://github.com/liyoungc.png" width="50" /></a> | **[Li-yang Chen](https://github.com/liyoungc)** | 🧠 Architect — system design, memory model, workflow |
+| <a href="https://github.com/cattia-claw"><img src="https://github.com/cattia-claw.png" width="50" /></a> | **[Cattia](https://github.com/cattia-claw)** | 🐱 Engineer — implementation, automation, maintenance |

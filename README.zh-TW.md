@@ -241,3 +241,10 @@ MIT
 - **海馬迴**在睡眠中的記憶固化功能
 
 為 [OpenClaw](https://github.com/openclaw/openclaw) 生態系打造。
+
+## 共同創作者
+
+| | 名稱 | 角色 |
+|---|---|---|
+| <a href="https://github.com/liyoungc"><img src="https://github.com/liyoungc.png" width="50" /></a> | **[陳禮揚](https://github.com/liyoungc)** | 🧠 架構師 — 系統設計、記憶模型、工作流程 |
+| <a href="https://github.com/cattia-claw"><img src="https://github.com/cattia-claw.png" width="50" /></a> | **[Cattia](https://github.com/cattia-claw)** | 🐱 工程師 — 實作、自動化、維護 |
