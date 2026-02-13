@@ -1,4 +1,4 @@
-# 🧠 OpenClaw Brain — dimensions記憶系統
+# 🧠 OpenClaw Engram — dimensions記憶系統
 
 為 [OpenClaw](https://github.com/openclaw/openclaw) AI Agent 打造的類人腦記憶架構。
 
@@ -66,7 +66,7 @@
 ```bash
 # 克隆到你的 OpenClaw workspace
 cd ~/.openclaw/workspace
-git clone https://github.com/cattia-claw/openclaw-brain.git brain
+git clone https://github.com/cattia-claw/openclaw-engram.git brain
 
 # 執行安裝腳本
 cd brain

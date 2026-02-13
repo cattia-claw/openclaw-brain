@@ -1,4 +1,4 @@
-# 🧠 OpenClaw Brain — Dimension Memory System
+# 🧠 OpenClaw Engram — Dimension Memory System
 
 **🌐 Language: [English](README.md) | [繁體中文](README.zh-TW.md)**
 
@@ -48,7 +48,7 @@ Transform your agent from a goldfish (forgets everything each session) into a sy
 ```bash
 # Clone into your OpenClaw workspace
 cd ~/.openclaw/workspace
-git clone https://github.com/cattia-claw/openclaw-brain.git brain
+git clone https://github.com/cattia-claw/openclaw-engram.git brain
 
 # Run the installer
 cd brain
